@@ -1,0 +1,81 @@
+body {
+    background-color: #000;
+}
+
+#landing-header {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 40vh;
+  }
+
+#landing-header h1 {
+    color: #fff;
+ }
+
+ .slideshow { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite; 
+  }
+
+  .slideshow li:nth-child(1) { 
+    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/115875308_181851600024765_7192189721611763974_n.jpg?_nc_cat=111&_nc_sid=8bfeb9&_nc_ohc=Iz4T9t03yLYAX_FGWLh&_nc_ht=scontent.fknu1-1.fna&oh=adb0be8b985552f00285127053674058&oe=5F4C7BD0) 
+  }
+  .slideshow li:nth-child(2) { 
+    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/94012582_153398872870038_6822136219153989632_n.jpg?_nc_cat=102&_nc_sid=8bfeb9&_nc_ohc=JWnYW846opwAX9BE8Ca&_nc_ht=scontent.fknu1-1.fna&oh=57a1bb27d896999b4b7dd6d8759e4c07&oe=5F4B9768);
+    animation-delay: 10s; 
+  }
+  .slideshow li:nth-child(3) { 
+    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/84531255_126053602271232_5242788091994832896_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_ohc=K6Zglsb4d3wAX9bexYO&_nc_ht=scontent.fknu1-1.fna&oh=aa6f728dcedcea47f793080611984e76&oe=5F4B21AE);
+    animation-delay: 20s; 
+  }
+  .slideshow li:nth-child(4) { 
+    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/108015669_180555723487686_3436410576938818863_o.jpg?_nc_cat=109&_nc_sid=8bfeb9&_nc_ohc=_-CXEEjjDwcAX-3VquG&_nc_ht=scontent.fknu1-1.fna&oh=b3ef75315944650b243f84a75ab2bacb&oe=5F4C4668);
+    animation-delay: 30s; 
+  }
+  .slideshow li:nth-child(5) { 
+    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/86379106_129676368575622_3920108864007045120_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_ohc=Xgt56UkFUzoAX88osW3&_nc_ht=scontent.fknu1-1.fna&oh=b8989bbb1d114e6a3bf2b60996e7effa&oe=5F49EA23);
+    animation-delay: 40s; 
+  }
+
+  @keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+  }
+
+  .no-cssanimations .slideshow li {
+	opacity: 1;
+}

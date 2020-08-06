@@ -1,0 +1,54 @@
+<%- include ("../partials/header") %>
+
+<header class="jumbotron">
+  <div class="container">
+      <h1><span class="glyphicon glyphicon-tent"></span> Welcome To Vannila Bakes!</h1>
+      <p>View our products, crafted with a mother's love</p>
+      <% if(currentUser && currentUser.isAdmin) { %>
+      <p>
+         <a class="btn btn-primary btn-lg" href="/muffins/new">Add New Product</a>
+      </p>
+      <% } %>
+       <p>
+      </p>
+  </div>
+</header>
+
+<div class="container mt-4">    
+  <div class="row">
+    <% muffins.forEach(function(muffin) { %>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card indexCards shadow border-0 mt-4">
+          <a href="/muffins/<%= muffin._id %>"><img id="campgroundCard" class="card-img-top" src="<%= muffin.image %>"></a>
+          <div class="card-body">
+            <h5 class="card-title text-capitalize">
+              <a href="/muffins/<%= muffin._id %>"><%= muffin.name %></a>
+                <small class="float-right text-muted"><%= muffin.price %>Dirham</small>
+            </h5>
+            <h6 class="card-subtitle">
+              <% if(muffin.comments.length === 0) { %>
+                <span class="text-muted">No Reviews</span>
+              <% } else { %>
+                <% var stars = ['<i class="far fa-star text-danger "></i>', '<i class="far fa-star text-danger "></i>', '<i class="far fa-star text-danger "></i>', '<i class="far fa-star text-danger "></i>', '<i class="far fa-star text-danger "></i>'] %>
+                <% for(var i = 0; i < Math.round(muffin.rateAvg); i++) { %>
+                    <% stars[i] = '<i class="fas fa-star text-danger "></i>' %>
+                <% } %>
+                <% for(var i = 0; i < stars.length; i++) { %>
+                  <%- stars[i] %>
+                <% } %>
+                <% if (muffin.comments.length === 1) { %>
+                  <span class="text-muted"><%= muffin.comments.length %> Review</span>
+                <% } else { %>
+                  <span class="text-muted"><%= muffin.comments.length %> Reviews</span>
+                <% } %>
+              <% } %>
+            </h6>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+  </div>
+</div>
+
+
+<%- include ("../partials/footer") %>

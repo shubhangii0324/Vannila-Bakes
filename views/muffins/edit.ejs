@@ -1,0 +1,42 @@
+<%- include ("../partials/header") %>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-12 col-sm-12 col-lg-9">
+      <div class="card shadow border-0">
+        <div class="card-body">
+          <h1 class="text-center">Edit
+              <%= muffin.name %>
+          </h1>
+          <p>
+            <small class="text-muted">Fields marked * are required.</small>
+          </p>
+          <form action="/muffins/<%= muffin._id %>?_method=PUT" method="POST" class="needs-validation" novalidate>
+            <div class="form-group">
+              <label>Name*</label>
+              <input type="text" class="form-control" name="muffin[name]" value="<%= muffin.name %>">
+            </div>
+            <div class="form-group">
+              <label for="">Price/Night*</label>
+              <input type="number" class="form-control" name="muffin[price]" value="<%= muffin.price %>" min="0.1" step="0.1">
+            </div>
+            <div class="form-group">
+                <label for="">Image*</label>
+                <input type="text" class="form-control"  name="muffin[image]" value="<% muffin.image %>" >
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Description*</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" name="muffin[recipe]" rows="3" required><%= muffin.recipe %></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger btn-block">Submit</button>
+          </form>
+          <a class="btn btn-link btn-block" href="/muffins/<%= muffin._id %>">Go Back</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+<%- include ("../partials/footer") %>
