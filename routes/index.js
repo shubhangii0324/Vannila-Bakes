@@ -15,7 +15,7 @@ router.get("/about", function(req, res) {
   res.render("about");
 });
 
-router.get("/muffins", function(req, res){
+router.get("/muffins", async function(req, res){
   muffin.find({}, function(err, allMuffins){
     if(err){
       console.log(err);

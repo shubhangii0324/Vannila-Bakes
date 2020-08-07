@@ -7,7 +7,6 @@ var mongoose = require("mongoose");
 var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var methodOverride = require("method-override");
-const MongoClient = require('mongodb').MongoClient;
 var flash = require("connect-flash");
 var muffin = require("./models/Muffin");
 var Comment = require("./models/comment");
@@ -18,14 +17,9 @@ var commentRoutes = require("./routes/comments");
 var muffinRoutes = require("./routes/muffins");
 var indexRoutes = require("./routes/index");
 
-// mongodb://localhost:27017/vannila_bakes_v1
-const uri = "mongodb+srv://Aditi:Sudha%40123@vannilabakes.xdexp.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true});
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
+ mongoose.connect("mongodb://Aditi:Sudha@vannilabakes.xdexp.mongodb.net/test?retryWrites=true&w=majority", 
+       {useNewUrlParser: true,
+        useUnifiedTopology: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
