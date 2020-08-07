@@ -17,7 +17,7 @@ var commentRoutes = require("./routes/comments");
 var muffinRoutes = require("./routes/muffins");
 var indexRoutes = require("./routes/index");
 
- mongoose.connect("mongodb://Aditi:Sudha@vannilabakes.xdexp.mongodb.net/test?retryWrites=true&w=majority", 
+ mongoose.connect("mongodb+srv://Severus:Snape@vannilabakes.xdexp.mongodb.net/test?retryWrites=true&w=majority", 
        {useNewUrlParser: true,
         useUnifiedTopology: true});
 
@@ -27,7 +27,7 @@ app.use(express.static(`${__dirname}/public`));
 app.use(methodOverride("_method"));
 app.use(flash());
 
-app.use(require("express-session")({
+app.use(require("cookie-session")({
     secret: "Aditi is the best baker in the world!!",
     resave: false,
     saveUninitialized: false
