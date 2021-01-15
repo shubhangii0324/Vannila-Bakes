@@ -40,22 +40,22 @@ body {
   }
 
   .slideshow li:nth-child(1) { 
-    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/115875308_181851600024765_7192189721611763974_n.jpg?_nc_cat=111&_nc_sid=8bfeb9&_nc_ohc=Iz4T9t03yLYAX_FGWLh&_nc_ht=scontent.fknu1-1.fna&oh=adb0be8b985552f00285127053674058&oe=5F4C7BD0) 
+    background-image: url(https://images.unsplash.com/photo-1514056052883-d017fddd0426?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Y2FrZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) 
   }
   .slideshow li:nth-child(2) { 
-    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/94012582_153398872870038_6822136219153989632_n.jpg?_nc_cat=102&_nc_sid=8bfeb9&_nc_ohc=JWnYW846opwAX9BE8Ca&_nc_ht=scontent.fknu1-1.fna&oh=57a1bb27d896999b4b7dd6d8759e4c07&oe=5F4B9768);
+    background-image: url(https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8Y2FrZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
     animation-delay: 10s; 
   }
   .slideshow li:nth-child(3) { 
-    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/84531255_126053602271232_5242788091994832896_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_ohc=K6Zglsb4d3wAX9bexYO&_nc_ht=scontent.fknu1-1.fna&oh=aa6f728dcedcea47f793080611984e76&oe=5F4B21AE);
+    background-image: url(https://images.unsplash.com/photo-1557163638-71e3ad2d3a52?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FrZXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
     animation-delay: 20s; 
   }
   .slideshow li:nth-child(4) { 
-    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/108015669_180555723487686_3436410576938818863_o.jpg?_nc_cat=109&_nc_sid=8bfeb9&_nc_ohc=_-CXEEjjDwcAX-3VquG&_nc_ht=scontent.fknu1-1.fna&oh=b3ef75315944650b243f84a75ab2bacb&oe=5F4C4668);
+    background-image: url(https://images.unsplash.com/photo-1502597276204-a3833c063739?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjd8fGNha2VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
     animation-delay: 30s; 
   }
   .slideshow li:nth-child(5) { 
-    background-image: url(https://scontent.fknu1-1.fna.fbcdn.net/v/t1.0-9/86379106_129676368575622_3920108864007045120_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_ohc=Xgt56UkFUzoAX88osW3&_nc_ht=scontent.fknu1-1.fna&oh=b8989bbb1d114e6a3bf2b60996e7effa&oe=5F49EA23);
+    background-image: url(https://images.unsplash.com/photo-1509665653475-295f17f738e6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTV8fGNha2VzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
     animation-delay: 40s; 
   }
 
