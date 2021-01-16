@@ -17,7 +17,9 @@ var commentRoutes = require("./routes/comments");
 var muffinRoutes = require("./routes/muffins");
 var indexRoutes = require("./routes/index");
 
- mongoose.connect("mongodb+srv://snape:Lily123@vannilabakes.rdmca.mongodb.net/test?retryWrites=true&w=majority", 
+var dbURL = "mongodb://localhost/yelp_camp" || "mongodb+srv://snape:Lily123@vannilabakes.rdmca.mongodb.net/test?retryWrites=true&w=majority";
+
+ mongoose.connect(dbURL, 
        {useNewUrlParser: true,
         useUnifiedTopology: true});
 
